@@ -6,17 +6,17 @@ const AllTheBooks = function (props) {
   return (
     <main>
       <div className="container">
-        <h3>FANTASY</h3>
+        <h3 className="text-center my-3 fw-bold">FANTASY</h3>
         <div className="row">
           {Books.map((book) => (
-            <div className="col-4" key={book.asin} xs={12} sm={6} md={4} lg={3}>
+            <div className="col-6 col-md-3" key={book.asin}>
               <Card>
-                <Card.Img src={book.img} className="w-100" />
+                <Card.Img src={book.img} className="book-img" />
                 <Card.Body>
-                  <Card.Title>{book.title}</Card.Title>
+                  <Card.Title className="text-truncate">{book.title}</Card.Title>
                   <Card.Text>{book.category}</Card.Text>
                   <Button variant="secondary">
-                    <i class="bi bi-bag-check me-3"></i>
+                    <i className="bi bi-bag-check me-3"></i>
                     {book.price} euro
                   </Button>
                 </Card.Body>
